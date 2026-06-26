@@ -2,10 +2,7 @@
 
 A package for integrating the `px` to `em` conversion function.
 
-![npm](https://img.shields.io/npm/v/@bu0nq/scss-function-em?style=for-the-badge)
-![npm](https://img.shields.io/npm/dt/@bu0nq/scss-function-em?style=for-the-badge)
-
-Documentation: [EN](README.md) | [RU](README.RU.md)
+![npm](https://img.shields.io/npm/v/@m2collective/scss-function-em?style=for-the-badge)
 
 ___
 
@@ -14,7 +11,7 @@ ___
 You can install the package automatically using NPM:
 
 ```
-npm i @bu0nq/scss-function-em
+npm i @m2collective/scss-function-em
 ```
 
 ## Usage
@@ -22,10 +19,16 @@ npm i @bu0nq/scss-function-em
 To use the package, import it into your project:
 
 ```scss
-@use "@bu0nq/scss-function-em" as *;
+@use "@m2collective/scss-function-em" as *;
 
 .demo {
     font-size: em(16px);
+}
+
+// Return
+
+.demo {
+    font-size: 1em;
 }
 ```
 
@@ -34,10 +37,16 @@ To use the package, import it into your project:
 You can change the namespace during function import and use the function with a different namespace:
 
 ```scss
-@use "@bu0nq/scss-function-em" as function;
+@use "@m2collective/scss-function-em" as function;
 
 .demo {
     font-size: function.em(16px);
+}
+
+// Return
+
+.demo {
+    font-size: 1em;
 }
 ```
 
@@ -46,7 +55,21 @@ You can change the namespace during function import and use the function with a 
 You can redefine the default values for the specified variables when importing the function:
 
 ```scss
-@use "@bu0nq/scss-function-em" as * with (
-    $baseline: 16,
+@use "@m2collective/scss-function-em" as * with (
+    $default: 16,
 );
+
+.demo {
+    font-size: em(16px);
+}
+
+// Return
+
+.demo {
+    font-size: 1em;
+}
 ```
+
+## License
+
+The MIT License (MIT). Please see the [License file](LICENSE.txt) for more information.
